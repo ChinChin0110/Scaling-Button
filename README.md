@@ -1,31 +1,49 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+A simple and easy use scaling button.
 
 ## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+```Swift
+class ViewController: UIViewController {
+
+    let scalingButton = ScalingButton()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(scalingButton)
+        scalingButton.addTarget(self, action: #selector(handleTouchDown), for: .primaryActionTriggered)      
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let bounds = UIScreen.main.bounds
+        scalingButton.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
+        scalingButton.center = CGPoint(x: bounds.width / 2 ,y: bounds.height / 2)
+    }
+
+    func handleTouchDown(scalingButton: ScalingButton) {
+        print("button did trigger")
+    }
+    
+}
+```
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+I need a scaling button ,which can scale large by how long you press and scale small when you unpress.
+I creat it and share to anyone who needs it.
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Just downlond the project and copy <b>ScalingButton.swift</b> & <b>BasicLayer.swift</b> to your project.
 
 ## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+comming soon.
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+MIT
