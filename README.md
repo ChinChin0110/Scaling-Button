@@ -42,7 +42,12 @@ Just downlond the project and copy <b>ScalingButton.swift</b> & <b>BasicLayer.sw
 
 ## API Reference
 
-comming soon.
+properties|description
+-|-
+curvaceousness| determine how curvaceousness of the corner.
+basicColor| button's color
+durationTime| how long of the animation time.
+scalingRatio| how many times the button scales.
 
 ## License
 
